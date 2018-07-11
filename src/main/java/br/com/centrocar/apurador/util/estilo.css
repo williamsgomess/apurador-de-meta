@@ -1,0 +1,10 @@
+/*
+ 	Encontre mais detalhes sobre as cores nomeadas suportadas pelo JavaFX em
+ 	https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html#typecolor
+ */
+ 
+/* Colors of JavaFX pie chart slices. */
+.data0.chart-pie { -fx-pie-color: #8fbc8f; }
+.data1.chart-pie { -fx-pie-color: #20b2aa; }
+.data2.chart-pie { -fx-pie-color: #ff6347; }
+.data3.chart-pie { -fx-pie-color: #87cefa; }

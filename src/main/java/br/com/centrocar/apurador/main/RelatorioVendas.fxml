@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="537.0"
+	prefWidth="874.0" xmlns="http://javafx.com/javafx/8"
+	xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="br.com.centrocar.apurador.controllers.RelatorioVendasController">
+	<children>
+		<Label fx:id="lbFuncionario" alignment="BOTTOM_LEFT"
+			contentDisplay="CENTER" focusTraversable="false" layoutX="373.0"
+			layoutY="26.0" prefHeight="19.0" prefWidth="302.0"
+			textAlignment="CENTER">
+			<font>
+				<Font name="System Bold" size="13.0" />
+			</font>
+		</Label>
+		<GridPane layoutX="314.0" layoutY="52.0" prefHeight="44.0"
+			prefWidth="243.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="175.0" minWidth="10.0" prefWidth="83.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="302.0" minWidth="10.0" prefWidth="160.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints maxHeight="22.0" minHeight="7.0"
+					prefHeight="17.0" vgrow="SOMETIMES" />
+				<RowConstraints maxHeight="26.0" minHeight="8.0"
+					prefHeight="16.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<Label alignment="CENTER" text="META:" textAlignment="CENTER"
+					GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+					<font>
+						<Font size="10.0" />
+					</font>
+				</Label>
+				<Label fx:id="lbMeta" contentDisplay="CENTER" prefHeight="1.0"
+					prefWidth="155.0" textAlignment="CENTER" GridPane.columnIndex="1"
+					GridPane.halignment="LEFT">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+					<GridPane.margin>
+						<Insets left="5.0" />
+					</GridPane.margin>
+				</Label>
+				<Label alignment="CENTER" prefHeight="28.0" prefWidth="81.0"
+					text="FALTAM:" textAlignment="CENTER" GridPane.halignment="CENTER"
+					GridPane.rowIndex="1" GridPane.valignment="CENTER">
+					<font>
+						<Font size="10.0" />
+					</font>
+				</Label>
+				<Label fx:id="lbValorEmFalta" contentDisplay="CENTER"
+					prefHeight="1.0" prefWidth="155.0" textAlignment="CENTER"
+					textFill="#cc2424" GridPane.columnIndex="1"
+					GridPane.halignment="CENTER" GridPane.rowIndex="1"
+					GridPane.valignment="CENTER">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+					<GridPane.margin>
+						<Insets left="3.0" />
+					</GridPane.margin>
+				</Label>
+			</children>
+		</GridPane>
+		<GridPane alignment="CENTER" gridLinesVisible="true"
+			layoutX="23.0" layoutY="134.0" mouseTransparent="true"
+			prefHeight="60.0" prefWidth="825.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="116.0" minWidth="10.0" prefWidth="111.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="184.0" minWidth="58.0" prefWidth="120.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="158.0" minWidth="0.0" prefWidth="118.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="149.0" minWidth="10.0" prefWidth="125.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="124.0" minWidth="10.0" prefWidth="112.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="116.0" minWidth="10.0" prefWidth="109.0" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="127.0" minWidth="10.0" prefWidth="123.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<Label contentDisplay="CENTER" prefHeight="17.0"
+					prefWidth="101.0" text="OUTRAS VENDAS" textAlignment="CENTER"
+					GridPane.columnIndex="1" GridPane.halignment="CENTER"
+					GridPane.valignment="CENTER">
+					<GridPane.margin>
+						<Insets />
+					</GridPane.margin>
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</Label>
+				<Label text="CUPOM (NFC-e)" GridPane.columnIndex="2"
+					GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+					<GridPane.margin>
+						<Insets />
+					</GridPane.margin>
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</Label>
+				<Label text="NOTA FISCAL (NF-e)" GridPane.columnIndex="3"
+					GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+					<GridPane.margin>
+						<Insets />
+					</GridPane.margin>
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</Label>
+				<Label text="TOTAL VENDAS" GridPane.columnIndex="4"
+					GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</Label>
+				<Label ellipsisString="" prefHeight="17.0" prefWidth="91.0"
+					text="TIPO DE VENDA" textAlignment="CENTER"
+					GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+					<GridPane.margin>
+						<Insets />
+					</GridPane.margin>
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</Label>
+				<Label prefHeight="17.0" prefWidth="45.0" text="VALOR"
+					GridPane.halignment="CENTER" GridPane.rowIndex="1"
+					GridPane.valignment="CENTER">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+					<GridPane.margin>
+						<Insets right="45.0" />
+					</GridPane.margin>
+				</Label>
+				<Label fx:id="lbSVF" alignment="CENTER"
+					contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0"
+					text="..." textAlignment="CENTER" GridPane.columnIndex="1"
+					GridPane.rowIndex="1">
+					<GridPane.margin>
+						<Insets left="5.0" />
+					</GridPane.margin>
+				</Label>
+				<Label fx:id="lbNFC" alignment="CENTER"
+					contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0"
+					text="..." textAlignment="CENTER" GridPane.columnIndex="2"
+					GridPane.halignment="CENTER" GridPane.rowIndex="1"
+					GridPane.valignment="CENTER" />
+				<Label fx:id="lbNF" alignment="CENTER" contentDisplay="CENTER"
+					prefHeight="17.0" prefWidth="120.0" text="..."
+					textAlignment="CENTER" GridPane.columnIndex="3"
+					GridPane.halignment="CENTER" GridPane.rowIndex="1"
+					GridPane.valignment="CENTER" />
+				<Label fx:id="lbTotalDeVendas" alignment="CENTER"
+					contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0"
+					text="..." textAlignment="CENTER" GridPane.columnIndex="4"
+					GridPane.halignment="CENTER" GridPane.rowIndex="1"
+					GridPane.valignment="CENTER" />
+				<Label contentDisplay="CENTER" prefHeight="6.0"
+					prefWidth="86.0" text="TOTAL GERAL  " textAlignment="CENTER"
+					textOverrun="CENTER_ELLIPSIS" wrapText="true"
+					GridPane.columnIndex="6" GridPane.halignment="CENTER"
+					GridPane.valignment="TOP">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</Label>
+				<Label fx:id="lbTotalGeral" alignment="CENTER"
+					contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0"
+					text="..." GridPane.columnIndex="6" GridPane.halignment="CENTER"
+					GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+				<Label text="DEVOLUÇÕES" textAlignment="CENTER"
+					textFill="#cc2424" GridPane.columnIndex="5"
+					GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</Label>
+				<Label fx:id="lbDevolucoes" alignment="CENTER"
+					contentDisplay="CENTER" prefHeight="17.0" prefWidth="111.0"
+					text="..." textAlignment="CENTER" textFill="#cc2424"
+					GridPane.columnIndex="5" GridPane.halignment="CENTER"
+					GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+				<Label alignment="CENTER" prefHeight="15.0" prefWidth="120.0"
+					text="Total Vendas - Devoluções" textAlignment="CENTER"
+					GridPane.columnIndex="6" GridPane.halignment="CENTER"
+					GridPane.valignment="BOTTOM">
+					<font>
+						<Font size="10.0" />
+					</font>
+				</Label>
+			</children>
+		</GridPane>
+		<JFXButton fx:id="btVoltar" buttonType="RAISED"
+			layoutX="4.0" layoutY="548.0" ripplerFill="#83c0f1"
+			style="-fx-background-color: #83c0f1; -fx-background-radius: 50px;"
+			text="&lt;">
+			<font>
+				<Font name="Bauhaus 93" size="20.0" />
+			</font>
+		</JFXButton>
+		<JFXButton fx:id="btFechar" layoutX="848.0" layoutY="1.0"
+			style="-fx-background-color: #cc2e2e;" text="X" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</JFXButton>
+		<PieChart fx:id="pieVendas" layoutX="40.0" layoutY="203.0"
+			prefHeight="385.0" prefWidth="399.0"
+			stylesheets="@../util/estilo.css" title="Porcentagem de Vendas" />
+		<PieChart fx:id="pieMeta" layoutX="463.0" layoutY="203.0"
+			prefHeight="385.0" prefWidth="385.0" title="Porcentagem de Meta" />
+		<Separator layoutX="438.0" layoutY="203.0"
+			orientation="VERTICAL" prefHeight="318.0" prefWidth="24.0">
+			<effect>
+				<Shadow color="#8f8c8cc8" height="0.0" radius="0.0"
+					width="0.0" />
+			</effect>
+		</Separator>
+		<Label fx:id="lbCodigo" alignment="CENTER"
+			contentDisplay="CENTER" disable="true" focusTraversable="false"
+			layoutX="260.0" layoutY="27.0" prefHeight="17.0" prefWidth="70.0"
+			textAlignment="CENTER">
+			<font>
+				<Font name="System Bold" size="12.0" />
+			</font>
+		</Label>
+		<Label alignment="CENTER" layoutX="225.0" layoutY="28.0"
+			text="Código:" textAlignment="CENTER">
+			<font>
+				<Font size="10.0" />
+			</font>
+		</Label>
+		<Label alignment="CENTER" layoutX="336.0" layoutY="28.0"
+			text="Nome:" textAlignment="CENTER">
+			<font>
+				<Font size="10.0" />
+			</font>
+		</Label>
+		<Label alignment="CENTER" layoutX="295.0" layoutY="107.0"
+			text="PERÍODO:" textAlignment="CENTER">
+			<font>
+				<Font size="10.0" />
+			</font>
+		</Label>
+		<DatePicker fx:id="dtInicial" editable="false"
+			layoutX="341.0" layoutY="102.0" mouseTransparent="true"
+			prefHeight="25.0" prefWidth="110.0" />
+		<Label alignment="CENTER" layoutX="455.0" layoutY="107.0"
+			text="Á" textAlignment="CENTER">
+			<font>
+				<Font size="10.0" />
+			</font>
+		</Label>
+		<DatePicker fx:id="dtFinal" editable="false"
+			layoutX="467.0" layoutY="102.0" mouseTransparent="true"
+			prefHeight="25.0" prefWidth="110.0" />
+		<JFXButton fx:id="btMinimizar" layoutX="822.0" layoutY="1.0"
+			prefHeight="25.0" prefWidth="24.0"
+			style="-fx-background-color: #2e5b86;" text="_" textFill="WHITE" />
+	</children>
+</AnchorPane>
