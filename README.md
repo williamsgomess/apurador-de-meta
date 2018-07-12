@@ -2,13 +2,25 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Build Status](https://travis-ci.org/williamsgomess/apurador-de-meta.svg?branch=master)](https://travis-ci.org/williamsgomess/apurador-de-meta)
 
-# Project Title
+# Apurador de Metas
 
-One Paragraph of project description goes here
+Apresenta a meta de um determinado vendedor
 
-## Getting Started
+## Começando
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Para abrir e esta aplicação em seu ambiente, você precisa ter (obrigatoriamente) uma JDK8 ou JDK9 instalada na sua máquina.
+Além do maven, IDE Eclipse (recomendado) e JavaFX SceneBuilder junto com a biblioteca jFoenix importada nele.
+* [JAVA-JDK](http://www.oracle.com/technetwork/pt/java/javase/downloads/index.html) - Download JDK8.
+* [Apurador-exec](https://github.com/williamsgomess/apurador-de-meta/raw/master/dist/apurador_de_meta_v1.1.0-executavel.jar) - apurador_de_meta_v1.1.0-executavel.jar
+* [Cliente SQLServer](https://www.microsoft.com/pt-br/download/details.aspx?id=50402)
+* [SceneBuilder](http://www.oracle.com/technetwork/java/javafxscenebuilder-1x-archive-2199384.html)
+* [JFoenix](http://www.jfoenix.com/)
+
+Feito esse passos, crie uma pasta na sua raiz C:/ como o nome apurador-de-metas, e em seguida crie um arquivo .txt como o nome usuarios.txt.
+
+Após criar o diretório e importar esse projeto em sua IDE(preferência eclipse) enquantos as depedências estão sendo baixadas vá ao arquivo db.properties e configure seu acesso ao banco de dados(seguindo o padrão dos SELECT's das classes DAOs.
+
+Pronto! Pode usar a vontade, e modificar.
 
 ### Prerequisites
 
