@@ -5,7 +5,7 @@
 
 	<groupId>br.com.centrocar.apurador</groupId>
 	<artifactId>apurador-de-metas</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.1.0</version>
 	<packaging>jar</packaging>
 
 	<name>apurador-de-metas</name>
