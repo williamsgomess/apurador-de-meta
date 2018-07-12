@@ -65,7 +65,7 @@ public class RelatorioVendasController implements Initializable {
 	@FXML
 	private JFXButton btFechar;
 	@FXML
-    private JFXButton btMinimizar;
+	private JFXButton btMinimizar;
 	@FXML
 	private PieChart pieVendas;
 	@FXML
@@ -90,9 +90,9 @@ public class RelatorioVendasController implements Initializable {
 
 		btMinimizar.setOnAction(event -> {
 			Stage stage = (Stage) btMinimizar.getScene().getWindow();
-		    stage.setIconified(true);
+			stage.setIconified(true);
 		});
-		
+
 		btFechar.setOnAction(event -> {
 			System.exit(0);
 		});
@@ -149,9 +149,10 @@ public class RelatorioVendasController implements Initializable {
 		lbSVF.setText(nf.format(semValorFiscal));
 		lbTotalDeVendas.setText(nf.format(totalDeVendas));
 	}
-	
-	public void setLabelText(Vendedor logado, Meta meta, Devolucao devolucao, NotaFiscal notaFiscal, NotaFiscalConsumidor notaFiscalConsumidor, 
-			SemValorFiscal semValorFiscal, TotalDeVendas totalDeVendas, LocalDate dataInicial, LocalDate dataFinal) {
+
+	public void setLabelText(Vendedor logado, Meta meta, Devolucao devolucao, NotaFiscal notaFiscal,
+			NotaFiscalConsumidor notaFiscalConsumidor, SemValorFiscal semValorFiscal, TotalDeVendas totalDeVendas,
+			LocalDate dataInicial, LocalDate dataFinal) {
 
 		this.login = logado.getDescricao();
 		this.dtInicial.setValue(dataInicial);
@@ -159,9 +160,9 @@ public class RelatorioVendasController implements Initializable {
 
 		lbFuncionario.setText(logado.getNome());
 		lbCodigo.setText(logado.getCodigo());
-		
+
 		NumberFormat nbf = NumberFormat.getCurrencyInstance();
-		
+
 		BigDecimal valorMeta = meta.getValorMeta();
 		BigDecimal valorDevolucao = devolucao.getTotal();
 		BigDecimal valorNotaFiscal = notaFiscal.getTotal();
@@ -171,7 +172,7 @@ public class RelatorioVendasController implements Initializable {
 
 		List<Node> nodes = listaDeNodes();
 		RelatorioVendasHelper helper = new RelatorioVendasHelper(nodes);
-		
+
 		helper.pegaValoresDasVendas(nbf, valorMeta, valorDevolucao, valorNotaFiscal, valorNotaFiscalConsumidor,
 				valorSemValorFiscal, valorTotalDeVendas);
 
@@ -197,17 +198,28 @@ public class RelatorioVendasController implements Initializable {
 			e.printStackTrace();
 		}
 
-		helper.graficoVenda(valorDevolucao, valorNotaFiscalConsumidor, valorNotaFiscal, valorSemValorFiscal, totalGeral);
+		helper.graficoVenda(valorDevolucao, valorNotaFiscalConsumidor, valorNotaFiscal, valorSemValorFiscal,
+				totalGeral);
 
 		Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(180), ev -> {
-			//final RelatorioVendasHelper help = new RelatorioVendasHelper();
+			// final RelatorioVendasHelper help = new RelatorioVendasHelper();
 			try {
-				Vendedor v = helper.pegaVendedor(login);								//Recupera um vendedor do banco
-                NotaFiscalConsumidor nfc = helper.pegaNotaFiscalConsumidor(v, dataInicial, dataFinal);				//Recupera o total de vendas como nota fiscal de consumidor
-                NotaFiscal nf = helper.pegaNotaFiscal(v, dataInicial, dataFinal);							//Recupera o total de vendas como nota fiscal
-                Devolucao dev = helper.pegaDevolucao(v, dataInicial, dataFinal);				//Recupera o total de devoluções de um vendedor
-                SemValorFiscal svfValor = helper.pegaSemValorFiscal(v, dataInicial, dataFinal);					//Recupera o total de vendas sem valor fiscal
-                TotalDeVendas totalVendas = helper.pegaTotalDeVendas(v, dataInicial, dataFinal);	//Recupera o total de todas as vendas efetivadas
+				Vendedor v = helper.pegaVendedor(login); // Recupera um vendedor do banco
+				NotaFiscalConsumidor nfc = helper.pegaNotaFiscalConsumidor(v, dataInicial, dataFinal); // Recupera o
+																										// total de
+																										// vendas como
+																										// nota fiscal
+																										// de consumidor
+				NotaFiscal nf = helper.pegaNotaFiscal(v, dataInicial, dataFinal); // Recupera o total de vendas como
+																					// nota fiscal
+				Devolucao dev = helper.pegaDevolucao(v, dataInicial, dataFinal); // Recupera o total de devoluções de um
+																					// vendedor
+				SemValorFiscal svfValor = helper.pegaSemValorFiscal(v, dataInicial, dataFinal); // Recupera o total de
+																								// vendas sem valor
+																								// fiscal
+				TotalDeVendas totalVendas = helper.pegaTotalDeVendas(v, dataInicial, dataFinal); // Recupera o total de
+																									// todas as vendas
+																									// efetivadas
 
 				valores(nbf, nfc, nf, dev, svfValor, totalVendas);
 			} catch (Exception e) {
