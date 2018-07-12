@@ -25,6 +25,7 @@ public class LoginHelper extends ControllersHelper {
      * Pega o resultado da consulta de uma {@link Meta} no banco de dados e devolve o retorno para umas referência da classe {@link Meta}.
      * recebe como parâmetro uma {@link Meta}.
      * 
+     * 
      * @param meta
      * @return Retorna uma {@link Meta}.
      * @throws Lança uma Exception
