@@ -75,7 +75,7 @@ public class LoginController implements Initializable {
 	}
 	
 	@FXML
-	private void sai(Event e) {
+	public void sai(Event event) {
 		System.exit(0);
 	}
 	
@@ -83,7 +83,7 @@ public class LoginController implements Initializable {
 	 * Executa os comando nescessários e abre a tela de Relatórios de Vendas.
 	 */
 	@FXML
-	private void loga(Event e) {
+	public void loga(Event event) {
 		Task<Void> task = new Task<Void>() {
 			@Override
 			protected Void call() throws Exception {
@@ -123,7 +123,7 @@ public class LoginController implements Initializable {
 							if (txUsuario.getText().equalsIgnoreCase(v.getDescricao())
 									&& dtInicial.getValue() != null) {
 
-								helper.criaTela(e, v, nfc, nf, dev, svfValor, totalVendas, metaDois,
+								helper.criaTela(event, v, nfc, nf, dev, svfValor, totalVendas, metaDois,
 										dataInicial, dataFinal);
 							}
 						} catch (Exception ex) {
@@ -152,7 +152,7 @@ public class LoginController implements Initializable {
 	 * E em seguida finaliza a aplicação.
 	 */
 	@FXML
-	private void abreArquivoDeLogin(Event event) {
+	public void abreArquivoDeLogin(Event event) {
 		final KeyCombination kb = new KeyCodeCombination(KeyCode.F10, KeyCombination.CONTROL_DOWN);
 		if (kb.match((KeyEvent) event)) {
 			try {
