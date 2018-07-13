@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Build Status](https://travis-ci.org/williamsgomess/apurador-de-meta.svg?branch=master)](https://travis-ci.org/williamsgomess/apurador-de-meta)
 [![Build Status](https://semaphoreci.com/api/v1/williamsgomess/apurador-de-meta/branches/master/badge.svg)](https://semaphoreci.com/williamsgomess/apurador-de-meta)
-[![Coverage Status](https://coveralls.io/repos/github/williamsgomess/apurador-de-meta/badge.svg?branch=master)](https://coveralls.io/github/williamsgomess/apurador-de-meta?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/48809dceb772d4f7bd68/maintainability)](https://codeclimate.com/github/williamsgomess/apurador-de-meta/maintainability)
 
 # Apurador de Metas
 
