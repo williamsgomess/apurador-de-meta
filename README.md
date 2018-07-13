@@ -2,8 +2,6 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Build Status](https://travis-ci.org/williamsgomess/apurador-de-meta.svg?branch=master)](https://travis-ci.org/williamsgomess/apurador-de-meta)
 [![Build Status](https://semaphoreci.com/api/v1/williamsgomess/apurador-de-meta/branches/master/badge.svg)](https://semaphoreci.com/williamsgomess/apurador-de-meta)
-![GitHub package version](https://img.shields.io/github/package-json/v/badges/shields.svg)
-
 
 # Apurador de Metas
 
