@@ -1,6 +1,7 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Build Status](https://travis-ci.org/williamsgomess/apurador-de-meta.svg?branch=master)](https://travis-ci.org/williamsgomess/apurador-de-meta)
+[![Build Status](https://semaphoreci.com/api/v1/williamsgomess/apurador-de-meta/branches/master/badge.svg)](https://semaphoreci.com/williamsgomess/apurador-de-meta)
 
 # Apurador de Metas
 
@@ -51,7 +52,7 @@ Para rodar ativamente em sua empresa, você deve revisar as classe model do paco
 
 Usado o [SemVer](http://semver.org/) para versionamento. Para avaliar as versões, veja as [tags no repositório](https://github.com/williamsgomess/apurador-de-meta/tags). 
 
-## Authors
+## Autores
 
 * **Williams Gomes** - *Trabalho inicial e final* - [williamsgomess](https://github.com/williamsgomess)
 
@@ -61,7 +62,7 @@ Veja quem [contribuiu](https://github.com/williamsgomess/apurador-de-meta/graphs
 
 Este projeto está licenciado sob a licença Apache 2.0 - Veja o arquivo [LICENSE.md](LICENSE.md) para mais detalhes.
 
-## Acknowledgments
+## Agradecimentos
 
 * Deus
 * Familia
