@@ -2,7 +2,6 @@
 # Docker Hub https://hub.docker.com/_/openjdk/
 # Read more about containers on our dev center
 # http://devcenter.wercker.com/docs/containers/index.html
-box: maven:3.5.2-jdk-8
 
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
@@ -14,5 +13,7 @@ build:
   steps:
     # https://github.com/wercker/step-maven
     - wercker/maven:
-      goals: clean install
+      goals: compile
+      settings: my-settings.xml
       profiles: prod
+      version: 3.5.2
