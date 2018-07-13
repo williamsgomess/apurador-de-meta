@@ -1,5 +1,5 @@
 build:
-  box: maven:3.5.4-jdk-8
   steps:
     - wercker/maven:
-      goals: verify
+      goals: clean install
+      version: 3.5.4
