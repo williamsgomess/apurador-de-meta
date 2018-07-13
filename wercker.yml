@@ -1,9 +1,0 @@
-box:
-  id: openjdk
-  ports:
-    - "8080"
-build:
-  steps:
-    - wercker/maven:
-      goals: clean install
-      version: 3.5.4
