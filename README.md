@@ -29,10 +29,10 @@ Tem Java JDK instalado, além do SceneBuilde e a IDE Eclipse
 No Maven
 ```
 <dependency>
-	<groupId>com.jfoenix</groupId>
-	<artifactId>jfoenix</artifactId>
-	<version>9.0.4</version>
-	</dependency>
+   <groupId>com.jfoenix</groupId>
+   <artifactId>jfoenix</artifactId>
+   <version>9.0.4</version>
+</dependency>
 ```
 ## Desenvolvimento
 
