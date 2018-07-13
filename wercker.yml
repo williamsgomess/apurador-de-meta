@@ -1,3 +1,7 @@
+box:
+  id: openjdk
+  ports:
+    - "8080"
 build:
   steps:
     - wercker/maven:
