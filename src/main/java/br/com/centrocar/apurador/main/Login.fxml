@@ -8,43 +8,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity"
-	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-	prefHeight="233.0" prefWidth="319.0"
-	style="-fx-background-color: #142945c9;"
-	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="br.com.centrocar.apurador.controllers.LoginController">
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#abreArquivoDeLogin" prefHeight="233.0" prefWidth="319.0" style="-fx-background-color: #142945c9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.centrocar.apurador.controllers.LoginController">
 	<children>
-		<JFXTextField fx:id="txUsuario" alignment="CENTER"
-			editable="false" focusColor="#ffffff00" focusTraversable="false"
-			layoutX="36.0" layoutY="26.0" mouseTransparent="true"
-			prefHeight="33.0" prefWidth="253.0" promptText="Usuário"
-			style="-fx-background-color: #ffffffcc;" unFocusColor="#ffffff00">
+		<JFXTextField fx:id="txUsuario" alignment="CENTER" editable="false" focusColor="#ffffff00" focusTraversable="false" layoutX="36.0" layoutY="26.0" mouseTransparent="true" prefHeight="33.0" prefWidth="253.0" promptText="Usuário" style="-fx-background-color: #ffffffcc;" unFocusColor="#ffffff00">
 			<font>
 				<Font size="15.0" />
 			</font>
 		</JFXTextField>
-		<JFXButton fx:id="btEntrar" buttonType="RAISED"
-			layoutX="35.0" layoutY="170.0" prefHeight="33.0" prefWidth="116.0"
-			style="-fx-background-color: #0e8f59ca;" text="Entrar"
-			textFill="WHITE" />
-		<JFXButton fx:id="btCancelar" buttonType="RAISED"
-			layoutX="171.0" layoutY="170.0" prefHeight="33.0" prefWidth="116.0"
-			style="-fx-background-color: #eb1515ba;" text="Cancelar"
-			textFill="WHITE" />
-		<JFXCheckBox fx:id="cbLogado" checkedColor="#142945c9"
-			disable="true" layoutX="104.0" layoutY="139.0"
-			mouseTransparent="true" prefHeight="17.0" prefWidth="134.0"
-			selected="true" text="Usuário logado" textFill="WHITE"
-			unCheckedColor="#000000b0">
+		<JFXButton fx:id="btEntrar" buttonType="RAISED" layoutX="35.0" layoutY="170.0" onAction="#loga" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0e8f59ca;" text="Entrar" textFill="WHITE" />
+		<JFXButton fx:id="btCancelar" buttonType="RAISED" layoutX="171.0" layoutY="170.0" onAction="#sai" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #eb1515ba;" text="Cancelar" textFill="WHITE" />
+		<JFXCheckBox fx:id="cbLogado" checkedColor="#142945c9" disable="true" layoutX="104.0" layoutY="139.0" mouseTransparent="true" prefHeight="17.0" prefWidth="134.0" selected="true" text="Usuário logado" textFill="WHITE" unCheckedColor="#000000b0">
 			<font>
 				<Font size="10.0" />
 			</font>
 		</JFXCheckBox>
-		<DatePicker fx:id="dtInicial" layoutX="35.0" layoutY="92.0"
-			prefHeight="25.0" prefWidth="116.0" />
-		<DatePicker fx:id="dtFinal" layoutX="171.0" layoutY="92.0"
-			prefHeight="25.0" prefWidth="116.0" />
-		<Label layoutX="158.0" layoutY="96.0" text="à" textFill="WHITE" />
+		<DatePicker fx:id="dtInicial" layoutX="35.0" layoutY="92.0" prefHeight="25.0" prefWidth="116.0" />
+		<DatePicker fx:id="dtFinal" layoutX="171.0" layoutY="92.0" prefHeight="25.0" prefWidth="116.0" />
+		<Label disable="true" layoutX="158.0" layoutY="96.0" text="à" textFill="WHITE" />
 	</children>
 </AnchorPane>

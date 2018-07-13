@@ -14,6 +14,7 @@ import br.com.centrocar.apurador.modelo.SemValorFiscal;
 import br.com.centrocar.apurador.modelo.TotalDeVendas;
 import br.com.centrocar.apurador.modelo.Vendedor;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.DatePicker;
 
@@ -43,11 +44,11 @@ public class LoginHelper extends ControllersHelper {
         return metaDois;
 	}
 	
-	public void criaTela(ActionEvent event, Vendedor v, NotaFiscalConsumidor nfc, NotaFiscal nf, Devolucao dev,
+	public void criaTela(Event e, Vendedor v, NotaFiscalConsumidor nfc, NotaFiscal nf, Devolucao dev,
 			SemValorFiscal svfValor, TotalDeVendas totalVendas, Meta metaDois, LocalDate dataInicial,
 			LocalDate dataFinal) throws Exception {
 
-		FXMLLoader loader = new Main().telaRelatorio("RelatorioVendas.fxml", event);
+		FXMLLoader loader = new Main().telaRelatorio("RelatorioVendas.fxml", (ActionEvent) e);
 		RelatorioVendasController controller = loader.getController();
 		controller.setLabelText(v, metaDois, dev, nf, nfc, svfValor, totalVendas, dataInicial, dataFinal);
 		

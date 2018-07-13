@@ -36,15 +36,16 @@
 		<dependency>
 			<groupId>com.jfoenix</groupId>
 			<artifactId>jfoenix</artifactId>
-			<version>9.0.4</version>
+			<version>8.0.5</version>
 		</dependency>
+		<!--
 		<dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>javafx</artifactId>
 			<version>2.2.3</version>
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/jfxrt.jar</systemPath>
-		</dependency>
+		</dependency> -->
 
 	</dependencies>
 	<build>
@@ -94,6 +95,7 @@
 					<check />
 				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
 </project>
